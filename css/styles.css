@@ -40,10 +40,12 @@ html {
 body {
 	font-family: Spartan, sans-serif;
 	background-color: var(--light-gray-magenta);
-	background-image: url("./../images/bg-pattern-top-mobile.svg");
-	background-repeat: no-repeat;
-	background-size: cover;
-	background-position: top;
+	background-image: url("./../images/bg-pattern-top-mobile.svg"),
+		url("./../images/bg-pattern-bottom-mobile.svg");
+	background-repeat: no-repeat, no-repeat;
+	background-size: contain, contain;
+	background-position: top, bottom;
+	min-height: 100vh;
 }
 
 main {
@@ -132,4 +134,103 @@ main {
 	font-size: 0.85rem;
 	color: var(--light-gray-magenta);
 	line-height: 1.5;
+}
+
+@media (min-width: 700px) {
+	body {
+		background-image: url("./../images/bg-pattern-top-desktop.svg"),
+			url("./../images/bg-pattern-bottom-desktop.svg");
+		background-repeat: no-repeat;
+		background-size: auto;
+		background-position: top left, bottom right;
+	}
+
+	main {
+		min-height: 100vh;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		max-width: 75rem;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	.rated-section {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		gap: 2rem;
+	}
+
+	.rated {
+		max-width: 30rem;
+	}
+
+	.stars {
+		padding: 0 2rem;
+	}
+
+	.stars img {
+		margin: 0 0.15rem;
+	}
+
+	.main-container {
+		text-align: left;
+		max-width: 30rem;
+	}
+
+	.main-title {
+		font-size: 2.5rem;
+		max-width: 24rem;
+	}
+
+	.testimonials-section {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		gap: 2rem;
+		min-height: 16rem;
+	}
+
+	.testimonial {
+		margin-bottom: 0;
+	}
+}
+
+@media (min-width: 890px) {
+	.rated {
+		display: flex;
+		align-items: center;
+	}
+
+	.stars {
+		margin-bottom: 0;
+	}
+}
+
+@media (min-width: 1030px) {
+	.rated:nth-of-type(2) {
+		margin-left: 2rem;
+	}
+
+	.rated:nth-of-type(3) {
+		margin-left: 4rem;
+	}
+
+	.testimonial {
+		height: 14rem;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+	}
+
+	.testimonial:nth-of-type(1) {
+		align-self: start;
+	}
+
+	.testimonial:nth-of-type(2) {
+		align-self: center;
+	}
+
+	.testimonial:nth-of-type(3) {
+		align-self: end;
+	}
 }
