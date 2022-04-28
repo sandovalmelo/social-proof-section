@@ -11,12 +11,26 @@
 	--soft-pink: hsl(333, 80%, 67%);
 
 	--dark-gray-magenta: hsl(303, 10%, 53%);
+	--dark-opac-magenta: hsla(302, 10%, 53%, 0.1);
 	--light-gray-magenta: hsl(300, 24%, 96%);
 }
 
 @font-face {
 	font-family: Spartan;
+	src: url("./../font/Spartan-Regular.ttf");
+	font-weight: 400;
+}
+
+@font-face {
+	font-family: Spartan;
 	src: url("./../font/Spartan-Medium.ttf");
+	font-weight: 500;
+}
+
+@font-face {
+	font-family: Spartan;
+	src: url("./../font/Spartan-Bold.ttf");
+	font-weight: 700;
 }
 
 html {
@@ -26,10 +40,14 @@ html {
 body {
 	font-family: Spartan, sans-serif;
 	background-color: var(--light-gray-magenta);
+	background-image: url("./../images/bg-pattern-top-mobile.svg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: top;
 }
 
 main {
-	padding: 1.5rem;
+	padding: 3rem 1.5rem;
 }
 
 .main-container {
@@ -40,6 +58,7 @@ main {
 	color: var(--dark-magenta);
 	font-size: 1.75rem;
 	margin-bottom: 1rem;
+	font-weight: 700;
 }
 
 .main-text {
@@ -47,4 +66,70 @@ main {
 	font-size: 0.85rem;
 	line-height: 1.5;
 	margin-bottom: 1.5rem;
+	font-weight: 500;
+}
+
+.rated-section {
+	margin-bottom: 2.5rem;
+}
+
+.rated {
+	background-color: var(--dark-opac-magenta);
+	margin-bottom: 1rem;
+	text-align: center;
+	color: var(--dark-magenta);
+	padding: 1rem 0;
+	font-size: 0.85rem;
+	font-weight: 700;
+}
+
+.stars {
+	margin-bottom: 0.75rem;
+}
+
+.testimonial {
+	background-color: var(--dark-magenta);
+	margin-bottom: 1rem;
+	padding: 1.75rem;
+	border-radius: 8px;
+}
+
+.testimonial-header {
+	display: flex;
+	align-items: center;
+	margin-bottom: 1.5rem;
+}
+
+.testimonial-description {
+	margin-left: 1rem;
+}
+
+.testimonial-name {
+	font-size: 1rem;
+	color: var(--light-gray-magenta);
+}
+
+.testimonial-role {
+	font-size: 0.85rem;
+	color: var(--soft-pink);
+	font-weight: 400;
+	margin-top: 0.25rem;
+}
+
+.testimonial-img {
+	border-radius: 100px;
+	overflow: hidden;
+	max-width: 40px;
+	max-height: 40px;
+	height: auto;
+}
+
+.testimonial-img img {
+	max-width: 100%;
+}
+
+.testimonial-text p {
+	font-size: 0.85rem;
+	color: var(--light-gray-magenta);
+	line-height: 1.5;
 }
