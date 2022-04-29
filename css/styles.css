@@ -13,6 +13,8 @@
 	--dark-gray-magenta: hsl(303, 10%, 53%);
 	--dark-opac-magenta: hsla(302, 10%, 53%, 0.1);
 	--light-gray-magenta: hsl(300, 24%, 96%);
+
+	--white: #fff;
 }
 
 @font-face {
@@ -39,7 +41,7 @@ html {
 
 body {
 	font-family: Spartan, sans-serif;
-	background-color: var(--light-gray-magenta);
+	background-color: var(--white);
 	background-image: url("./../images/bg-pattern-top-mobile.svg"),
 		url("./../images/bg-pattern-bottom-mobile.svg");
 	background-repeat: no-repeat, no-repeat;
